@@ -29,7 +29,8 @@ def apply_coupons(cart, coupons)
   cart.each do |cart_item|
     if cart_item[:count]<= 0
       #remove item from array
-      cart.delete_at(cart_item)
+      # cart.delete_at(cart_item)
+      
     end
   end
   cart
