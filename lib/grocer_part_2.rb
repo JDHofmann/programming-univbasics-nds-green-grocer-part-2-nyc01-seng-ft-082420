@@ -1,5 +1,17 @@
 require_relative './part_1_solution.rb'
 require 'pry'
+
+def find_item_index_in_collection(name, collection)
+  index = 0
+
+  collection.each do |grocery_item|
+    return grocery_item if grocery_item[index] === name
+    index += 1
+  end
+
+  nil
+end
+
 def apply_coupons(cart, coupons)
   coupons.each do | coupon_i |
     # find coupon item in cart
@@ -15,6 +27,7 @@ def apply_coupons(cart, coupons)
     cart << new_item
     # cart[array index number]
     # look in cart to find item with same name as discounted_item[:item]
+    cart_index_number = find_item_index_in_collection(coupon_i[:item], cart)
     # subtract new_item[:count] from cart[item][:price]
 
     binding.pry
