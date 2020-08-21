@@ -42,16 +42,11 @@ def apply_clearance(cart)
 end
 
 def checkout(cart, coupons)
-  # This method should call
-  # * consolidate_cart
+
   consolidated_cart = consolidate_cart(cart)
   applied_coupons = apply_coupons(consolidated_cart, coupons)
-  binding.pry
-  # * apply_coupons
-  # * apply_clearance
-  #
-  # BEFORE it begins the work of calculating the total (or else you might have
-  # some irritated customers
+  applied_clearance = apply_clearance(applied_coupons)
+
 
   #return float total cart
 end
