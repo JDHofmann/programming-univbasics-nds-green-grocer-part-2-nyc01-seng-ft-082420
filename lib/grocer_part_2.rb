@@ -5,7 +5,7 @@ def apply_coupons(cart, coupons)
     # find coupon item in cart
     discounted_item = find_item_by_name_in_collection(coupon_i[:item], cart)
     discounted_item_cost = coupon_i[:cost]/coupon_i[:num]
-    discounted_item_name = coupon_i[:item]
+    # discounted_item_name = coupon_i[:item]
     new_item = {
       :item => "#{discounted_item[:item]} W/COUPON",
       :price => discounted_item_cost,
@@ -13,7 +13,7 @@ def apply_coupons(cart, coupons)
       :count => coupon_i[:num]
     }
     cart << new_item
-    cart[:"#{discounted_item_name}"]
+    # cart[:"#{discounted_item_name}"]
     # look in cart to find item with same name as discounted_item[:item]
     # subtract new_item[:count] from cart[item][:price]
 
