@@ -28,6 +28,7 @@ def apply_coupons(cart, coupons)
     # cart[array index number]
     # look in cart to find item with same name as discounted_item[:item]
     cart_index_number = find_item_index_in_collection(coupon_i[:item], cart)
+    cart[cart_index_number][:price]=- new_item[:count]
     # subtract new_item[:count] from cart[item][:price]
 
     binding.pry
