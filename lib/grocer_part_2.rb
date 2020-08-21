@@ -45,17 +45,13 @@ def apply_clearance(cart)
 end
 
 def checkout(cart, coupons)
-
   consolidated_cart = consolidate_cart(cart)
   applied_coupons = apply_coupons(consolidated_cart, coupons)
   applied_clearance = apply_clearance(applied_coupons)
-
   total = 0
   applied_clearance.each do | item |
     total = total + item[:price]*item[:count]
-    # binding.pry
   end
-  #return float total cart
   if total > 100
     total = total * 0.9
   end
