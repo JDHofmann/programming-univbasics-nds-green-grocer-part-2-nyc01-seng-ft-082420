@@ -9,7 +9,7 @@ def apply_coupons(cart, coupons)
 #   {:item => "AVOCADO W/COUPON", :price => 2.50, :clearance => true, :count => 2}
 # ]
 coupons.each do | |
-
+  
 end
 
 end
