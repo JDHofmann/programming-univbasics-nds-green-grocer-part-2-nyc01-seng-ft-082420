@@ -5,7 +5,7 @@ def find_item_index_in_collection(name, collection)
   index = 0
 
   collection.each do |grocery_item|
-    return grocery_item[index] if grocery_item[:item] === name
+    return index if grocery_item[:item] === name
     index += 1
   end
 
