@@ -31,6 +31,8 @@ def apply_coupons(cart, coupons)
 end
 
 def apply_clearance(cart)
+  # apply price *.8 to item if clearance == true
+  # use Float round method to round off to the cent
   
 
   cart
