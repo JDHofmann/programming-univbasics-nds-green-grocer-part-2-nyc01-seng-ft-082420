@@ -13,8 +13,9 @@ def apply_coupons(cart, coupons)
       :count => coupon_i[:num]
     }
     cart << new_item
+
+    # look in cart to find item with same name as discounted_item[:item]
     # subtract new_item[:count] from cart[item][:price]
-    
     binding.pry
   end
 cart
