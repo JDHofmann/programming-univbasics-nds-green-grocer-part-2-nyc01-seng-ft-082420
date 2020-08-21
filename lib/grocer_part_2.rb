@@ -20,6 +20,7 @@ def apply_coupons(cart, coupons)
       :count => coupon_i[:num]
     }
     # push new_item to cart
+    cart << new_item
     # subtract new_item[:count] from cart[item][:price]
     binding.pry
   end
