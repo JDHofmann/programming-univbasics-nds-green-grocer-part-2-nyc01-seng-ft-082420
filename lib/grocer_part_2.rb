@@ -4,6 +4,12 @@ def apply_coupons(cart, coupons)
   # Consult README for inputs and outputs
   #
   # REMEMBER: This method **should** update cart
+  #returns:
+#   [
+#   {:item => "AVOCADO", :price => 3.00, :clearance => true, :count => 1},
+#   {:item => "KALE", :price => 3.00, :clearance => false, :count => 1},
+#   {:item => "AVOCADO W/COUPON", :price => 2.50, :clearance => true, :count => 2}
+# ]
 end
 
 def apply_clearance(cart)
