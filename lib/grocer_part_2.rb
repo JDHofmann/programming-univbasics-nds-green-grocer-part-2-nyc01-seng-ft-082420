@@ -10,7 +10,7 @@ def apply_coupons(cart, coupons)
 # ]
 coupons.each do | coupon_item |
   # find coupon item in cart
-  find_item_by_name_in_collection(name, collection)
+  find_item_by_name_in_collection(coupon_item[:item], cart)
 end
 
 end
