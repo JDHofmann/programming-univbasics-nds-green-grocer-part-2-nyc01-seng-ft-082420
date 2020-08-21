@@ -11,6 +11,7 @@ def apply_coupons(cart, coupons)
 coupons.each do | coupon_i |
   # find coupon item in cart
   discounted_item = find_item_by_name_in_collection(coupon_i[:item], cart)
+  binding.pry
 end
 
 end
