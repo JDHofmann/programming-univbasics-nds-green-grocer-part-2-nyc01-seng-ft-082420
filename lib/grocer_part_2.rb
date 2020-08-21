@@ -31,13 +31,10 @@ def apply_coupons(cart, coupons)
 end
 
 def apply_clearance(cart)
-  # apply price *.8 to item if clearance == true
-  # use Float round method to round off to the cent
   cart.each do |cart_item|
     if cart_item[:clearance]
       cart_item[:price] = cart_item[:price]*0.8
       cart_item[:price] = cart_item[:price].round(2)
-      # binding.pry
     end
   end
 
