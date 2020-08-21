@@ -50,7 +50,7 @@ def checkout(cart, coupons)
   total = 0
   applied_clearance.each do | item |
     total = total + item[:price]*item[:count]
-    binding.pry
+    # binding.pry
   end
   #return float total cart
   if total > 100
