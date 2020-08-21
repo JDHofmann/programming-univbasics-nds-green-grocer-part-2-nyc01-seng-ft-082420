@@ -1,13 +1,6 @@
 require_relative './part_1_solution.rb'
 require 'pry'
 def apply_coupons(cart, coupons)
-  # REMEMBER: This method **should** update cart
-  #returns:
-#   [
-#   {:item => "AVOCADO", :price => 3.00, :clearance => true, :count => 1},
-#   {:item => "KALE", :price => 3.00, :clearance => false, :count => 1},
-#   {:item => "AVOCADO W/COUPON", :price => 2.50, :clearance => true, :count => 2}
-# ]
   coupons.each do | coupon_i |
     # find coupon item in cart
     discounted_item = find_item_by_name_in_collection(coupon_i[:item], cart)
@@ -19,9 +12,9 @@ def apply_coupons(cart, coupons)
       :clearance => discounted_item[:clearance],
       :count => coupon_i[:num]
     }
-    # push new_item to cart
     cart << new_item
     # subtract new_item[:count] from cart[item][:price]
+    
     binding.pry
   end
 cart
