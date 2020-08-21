@@ -53,4 +53,8 @@ def checkout(cart, coupons)
     binding.pry
   end
   #return float total cart
+  if total > 100
+    total = total * .9
+  end
+  total
 end
