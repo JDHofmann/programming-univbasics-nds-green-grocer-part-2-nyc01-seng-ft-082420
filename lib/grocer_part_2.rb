@@ -12,7 +12,9 @@ def apply_coupons(cart, coupons)
     # find coupon item in cart
     discounted_item = find_item_by_name_in_collection(coupon_i[:item], cart)
     discounted_item_cost = coupon_i[:cost]/coupon_i[:num]
-    binding.pry
+    new_item = {
+      
+    }
   end
 cart
 end
