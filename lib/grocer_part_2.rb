@@ -30,7 +30,7 @@ def apply_coupons(cart, coupons)
     if cart_item[:count]<= 0
       #remove item from array
       # cart.delete_at(cart_item)
-      
+      binding.pry
     end
   end
   cart
