@@ -35,7 +35,7 @@ def apply_clearance(cart)
   # use Float round method to round off to the cent
   cart.each do |cart_item|
     if cart_item[:clearance]
-
+      binding.pry
     end
   end
 
