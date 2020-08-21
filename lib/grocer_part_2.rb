@@ -26,13 +26,15 @@ def apply_coupons(cart, coupons)
     cart_index_number = find_item_index_in_collection(coupon_i[:item], cart)
     cart[cart_index_number][:count]-= new_item[:count]
   end
-  cart.each do |cart_item|
-    if cart_item[:count]<= 0
-      #remove item from array
-      # cart.delete_at(cart_item)
-      binding.pry
-    end
-  end
+  cart.delete_if { |cart_item| cart_item[:count]<= 0}
+  # cart.each do |cart_item|
+  #   cart.delete_if { }
+  #   if cart_item[:count]<= 0
+  #     #remove item from array
+  #     # cart.delete_at(cart_item)
+  #     binding.pry
+  #   end
+  # end
   cart
 end
 
