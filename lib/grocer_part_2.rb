@@ -14,10 +14,8 @@ end
 
 def apply_coupons(cart, coupons)
   coupons.each do | coupon_i |
-    # find coupon item in cart
     discounted_item = find_item_by_name_in_collection(coupon_i[:item], cart)
     discounted_item_cost = coupon_i[:cost]/coupon_i[:num]
-    # discounted_item_name = coupon_i[:item]
     new_item = {
       :item => "#{discounted_item[:item]} W/COUPON",
       :price => discounted_item_cost,
@@ -25,16 +23,13 @@ def apply_coupons(cart, coupons)
       :count => coupon_i[:num]
     }
     cart << new_item
-    # binding.pry
-    # cart[array index number]
-    # look in cart to find item with same name as discounted_item[:item]
     cart_index_number = find_item_index_in_collection(coupon_i[:item], cart)
     cart[cart_index_number][:count]-= new_item[:count]
-    # subtract new_item[:count] from cart[item][:price]
-    
-    binding.pry
   end
-cart
+  cart.each do |cart_item|
+    if cart_item[:count]<= 0
+      
+  cart
 end
 
 def apply_clearance(cart)
