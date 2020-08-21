@@ -25,6 +25,7 @@ def apply_coupons(cart, coupons)
       :count => coupon_i[:num]
     }
     cart << new_item
+    binding.pry
     # cart[array index number]
     # look in cart to find item with same name as discounted_item[:item]
     cart_index_number = find_item_index_in_collection(coupon_i[:item], cart)
