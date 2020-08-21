@@ -19,6 +19,9 @@ def apply_coupons(cart, coupons)
       :clearance => discounted_item[:clearance],
       :count => coupon_i[:num]
     }
+    # push new_item to cart
+    # subtract new_item[:count] from cart[item][:price]
+    binding.pry
   end
 cart
 end
