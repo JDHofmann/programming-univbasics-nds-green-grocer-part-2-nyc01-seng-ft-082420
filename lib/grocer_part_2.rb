@@ -51,5 +51,6 @@ def checkout(cart, coupons)
   applied_clearance.each do | item |
     total = total + item[:price]*item[:count]
     binding.pry
+  end
   #return float total cart
 end
