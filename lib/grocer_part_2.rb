@@ -12,9 +12,12 @@ def apply_coupons(cart, coupons)
     # find coupon item in cart
     discounted_item = find_item_by_name_in_collection(coupon_i[:item], cart)
     discounted_item_cost = coupon_i[:cost]/coupon_i[:num]
-    
-    new_item = {
 
+    new_item = {
+      :item => "#{discounted_item[:item]} W/COUPON",
+      :price => discounted_item_cost,
+      :clearance => discounted_item[:clearance],
+      :count => coupon_i[:num]
     }
   end
 cart
