@@ -8,9 +8,9 @@ def apply_coupons(cart, coupons)
 #   {:item => "KALE", :price => 3.00, :clearance => false, :count => 1},
 #   {:item => "AVOCADO W/COUPON", :price => 2.50, :clearance => true, :count => 2}
 # ]
-coupons.each do | |
+coupons.each do | coupon_item |
   # find coupon item in cart
-  
+  find_item_by_name_in_collection(name, collection)
 end
 
 end
